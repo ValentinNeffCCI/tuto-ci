@@ -1,5 +1,9 @@
 services:
   app:
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - LOCAL_PORT=${LOCAL_PORT}
+      - LOCAL_PORT_SSL=${LOCAL_PORT_SSL}
     restart: unless-stopped
     container_name: react-starter
     build:
